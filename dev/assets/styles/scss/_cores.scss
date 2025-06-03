@@ -1,0 +1,29 @@
+
+@use 'variaveis' as v;
+
+$cores: (
+  cor-0: v.$cor-0,
+  cor-1: v.$cor-1,
+  cor-2: v.$cor-2,
+  cor-3: v.$cor-3,
+  cor-4: v.$cor-4,
+  cor-5: v.$cor-5,
+  cor-6: v.$cor-6,
+  cor-7: v.$cor-7,
+  cor-8: v.$cor-8,
+  cor-9: v.$cor-9,
+  cor-10: v.$cor-10,
+  cor-11: v.$cor-11,
+  cor-12: v.$cor-12,
+  cor-p1: v.$cor-p1,
+  cor-p2: v.$cor-p2,
+  cor-p3: v.$cor-p3,
+  cor-p4: v.$cor-p4,
+  cor-p5: v.$cor-p5,
+);
+
+@each $nome, $valor in $cores {
+  .#{$nome} {
+    color: $valor;
+  }
+}

@@ -4,24 +4,186 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./assets/libraries/materialize/css/materialize.css">
+
+    <!-- Link para o ícones do google -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/styles/style.css">
+
     <title>Bikcraft</title>
 </head>
 <body>
 
     <header>
-        <nav>
-        <div class="nav-wrapper">
-          <a href="#" class="brand-logo">Logo</a>
-          <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a href="sass.html">Sass</a></li>
-            <li><a href="badges.html">Components</a></li>
-            <li><a href="collapsible.html">JavaScript</a></li>
-          </ul>
-        </div>
-      </nav>
+        
+          <nav class="black">
+            <div class="nav-wrapper container">
+              <a href="index.html" class="brand-logo font-1-xxl">
+                <img src="./assets/img/bikcraft.svg" alt="">
+              </a>
+              <!-- Ícone do menu mobile -->
+              <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+              </a>
+          
+              <!-- Menu desktop -->
+              <ul id="nav-mobile" class="right hide-on-med-and-down">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="listar.html">Listagem</a></li>
+              </ul>
+          
+              <!-- Menu mobile -->
+              <ul class="sidenav" id="mobile-demo">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="cadastro.html">Cadastro</a></li>
+                <li><a href="listar.html">Listagem</a></li>
+              </ul>
+            </div>
+          </nav>
     </header>
     
+    <main>
+       <div class="color">
+            <div class="row container">
+
+              <div class="col s12 m12 l6 text" >
+                <h1 class=" font-1-xxl cor-0">Bicicletas feitas sobre medida</h1>
+
+                <p class="font-2-l cor-5">
+                  Bicicletas elétricas de alta precisão e qualidade, feitas sob medida para você. Explore o mundo na sua velocidade com a Bikcraft.
+                </p>
+
+                <a class="waves-effect waves-light btn">Escolha a sua</a>
+              </div>
+
+              <div class="col s12 m12 l6 bicicleta center-content ">
+                <img class="responsive-img" src="./assets/img/bicicleta/nimbus1.jpg" alt="bicicleta preta"> 
+                
+              </div>
+            </div>
+        </div>
+
+    </main>
+
+    <article class="bicicletas-lista">
+
+      <h2 class="font-1-xxl container">escolha a sua<span class="cor-p1">.</span></h2>
+
+      <ul>
+        <li>
+          <a href="">
+            <img src="./assets/img/bicicletas/magic-home.jpg" alt="bicicleta Preta">
+            <h3 class="font-1-xl cor-12">Magic Might</h3>
+            <span class="font-2-m cor-8">R$ 2999</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <img src="./assets/img/bicicletas/nimbus-home.jpg" alt="bicicleta Preta">
+            <h3 class="font-1-xl cor-12">Nimbus Stark</h3>
+            <span class="font-2-m cor-8">R$ 2999</span>
+          </a>
+        </li>
+
+        <li>
+          <a href="">
+            <img src="./assets/img/bicicletas/nebula-home.jpg" alt="bicicleta Branca">
+            <h3 class="font-1-xl cor-12">Nebula Cosmic</h3>
+            <span class="font-2-m cor-8">R$ 2999</span>
+          </a>
+        </li>
+      
+      </ul>
+
+    </article>
+
+    <article class="color"> 
+      <div class="row tecnologia container">
+
+        <div class="col s12 m12 l6 text cor-0  tecnologia-conteudo" >
+          
+          <span class="font-2-l-b cor-5">tecnologia Avançada</span>
+          <h2 class="font-1-xxl cor-0">você escolhe as suas cores e componentes <span class="cor-p1">.</span></h2>
+          <p class=" font-2-l cor-5">Cada Bikcraft é única e possui sua identidade. As medidas serão exatas para o seu corpo e altura, garantindo maior conforto e    
+             ergonomia na sua pedalada. Você pode também personalizar completamente suas cores. 
+          </p>
+          <a class="waves-effect waves-light btn">Escolha um modelo</a>
+
+        <div class="tecnologia-vantagens">
+          <div>
+            <img src="./assets/img/icones/rastreador.svg" alt="">
+            <h3 class="font-1-m cor-0">Motor Elétrico</h3>
+            <p class="font-2-s cor-5">Toda Bikcraft é equipada com um motor elétrico que possui duração de até 120h. A bateria é recarregada com a sua energia gasta ao 
+               pedalar.
+            </p>
+          </div>
+
+          <div>
+            <img src="./assets/img/icones/eletrica.svg" alt="">
+            <h3 class="font-1-m cor-0">Rastreador</h3>
+            <p class="font-2-s cor-5">Sabemos o quão preciosa é a sua Bikcraft, por isso adicionamos rastreadores e sistemas anti-furto para garantir seu sossego</p>
+          </div>
+
+        </div>
+
+      </div>
+
+        <div class="col l6 text cor-0 hide-on-med-and-down tecnologia-imagem" >
+          <img class="responsive-img" src="./assets/img/fotos/tecnologia.jpg" alt="">
+        </div>
+
+       </div>
+    </article>
+
+    <section class="depoimento">
+
+      <img src="./assets/img/fotos/depoimento.jpg" alt="Pessoa pedalando">
     
+
+      <div class="depoimento-conteudo">
+        <blockquote class="font-1-xl cor-p5">
+          <p>
+            "Pedalar sempre foi a minha paixão, o que o pessoal da Bikcraft fez foi intensificar o meu amor por esta atividade. Recomendo à todos que amo."
+          </p>
+        </blockquote>
+        <span class="font-1-m-b cor-p4">Ana Julia</span>
+      </div>
+    </section>
+
+    <footer class="#000000 black">
+        <div class="row footer-container text-align: center"  style = "margin-bottom: 0;">
+          <div class="col s12 m12 l6 footer-contato">
+            <h3 class="font-1-xl cor-0">CONTATO</h3>
+            <ul class="font-2-m cor-5">
+              <li><a href="tel:+5542999054547"> +55 42 999054547</a></li>
+              <li><a href="mailto">contato@bikcraft.com</a></li>
+              <li>Rua XV de Novembro, 42 - Centro</li>
+              <li>Guarapuava </li>
+            </ul>
+          </div>
+
+            <div class="col s12 m12 l6 footer-informaçoes">
+              <h3 class="font-1-xl cor-0">INFORMAÇÕES</h3>
+              <ul class="font-2-m cor-5">
+                <li><a href=> Bicicletas</a></li>
+                <li><a href=>Seguros</a></li>
+                <li><a href="">Contato</a></li>
+                <li><a href="">Termos e Condições</a> </li>
+              </ul>
+            </div>
+
+          
+        </div>
+    </footer>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+      });
+    </script>
 </body>
 </html>

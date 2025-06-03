@@ -1,0 +1,18 @@
+@use 'variaveis' as v;
+
+
+footer{
+    padding: 30px;
+}
+
+.no-margin-row {
+    margin-bottom: 0;
+  }
+
+.footer-contato a{
+    color: v.$cor-0;
+}
+
+.footer-informaçoes a{
+    color: v.$cor-0;
+}

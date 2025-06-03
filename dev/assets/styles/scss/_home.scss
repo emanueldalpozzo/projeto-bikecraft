@@ -1,0 +1,47 @@
+@use 'variaveis' as v;
+.color{
+    background-color: v.$cor-12;
+   
+}
+
+.text{
+    margin-bottom: 50px;
+    } 
+
+.text h1{
+    margin-bottom: 1rem;
+}
+
+.text p{
+    margin-bottom: 20px;
+
+}
+
+@media (max-width: 1200px) {
+    .text h1{
+        margin-bottom: 0.8rem;
+       
+    }
+    
+    .text p{
+        margin-bottom: 15px;
+    
+    }
+}
+
+@media (max-width: 600px) {
+    .color{
+        background-color: v.$cor-11;
+        padding-top: 30px;
+    }
+
+    .text h1{
+        margin-bottom: 0.6rem;
+    
+    }
+    
+    .text p{
+        margin-bottom: 10px;
+    
+    }
+}

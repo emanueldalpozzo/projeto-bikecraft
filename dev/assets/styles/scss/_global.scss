@@ -1,0 +1,28 @@
+body {
+     font-family: Arial, Helvetica, sans-serif; 
+     margin: 0 auto; 
+}
+
+p, h1, h2, h3{
+    margin: 0;
+}
+
+ul{
+    padding: 0;
+    list-style: none;
+}
+
+.collection,
+.collection .collection-item {
+  border: none;
+  box-shadow: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+  }
+
+img[src$=".jpg"]{
+    border-radius: 4px;
+}

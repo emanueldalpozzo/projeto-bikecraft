@@ -1,0 +1,87 @@
+
+@use 'variaveis' as *;
+@use 'mixins' as *;
+
+/* Extra Grande */
+.font-1-xxl {
+  @include font($font-bold, 4rem, 1.125, $font-poppins);
+}
+.font-1-xl {
+  @include font($font-bold, 2rem, 1.2, $font-poppins);
+}
+.font-2-xl {
+  @include font($font-medium, 2rem, 1.2, $font-roboto);
+}
+
+/* Grande */
+.font-1-l {
+  @include font($font-regular, 1.5rem, 1.5, $font-poppins);
+}
+.font-2-l,
+.font-2-l-b {
+  @include font($font-regular, 1.5rem, 1.5, $font-roboto);
+}
+.font-2-l-b {
+  font-weight: $font-medium;
+  letter-spacing: 0.015em;
+  text-transform: uppercase;
+}
+
+/* Médio */
+.font-1-m,
+.font-1-m-b {
+  font-family: $font-poppins !important;
+  font-size: 1.125rem;
+  line-height: 1.35;
+  font-weight: $font-regular;
+}
+.font-1-m-b {
+  font-weight: $font-bold;
+}
+.font-2-m {
+  @include font($font-medium, 1.125rem, 1.35, $font-roboto);
+}
+
+/* Pequeno */
+.font-1-s {
+  @include font($font-regular, 1rem, 1.5, $font-poppins);
+}
+
+/* Extra Pequeno */
+.font-1-xs {
+  @include font($font-regular, 0.75rem, 1.35, $font-poppins);
+}
+.font-2-xs {
+  @include font($font-regular, 0.875rem, 1.43, $font-roboto);
+}
+
+/* Responsividade */
+@media (max-width: $break-lg) {
+  .font-1-xxl {
+    font-size: 3rem;
+    line-height: 1.125;
+  }
+
+  .font-2-l {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+}
+
+@media (max-width: $break-sm) {
+  .font-1-xxl {
+    font-size: 2rem;
+    line-height: 1.125;
+  }
+
+  .font-2-l {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+
+  .font-1-xl,
+  .font-2-xl {
+    font-size: 2rem;
+  }
+}
+

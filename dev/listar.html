@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Listagem de Bicicletas</title>
+  <link rel="stylesheet" href="./assets/libraries/materialize/css/materialize.css">
+  <link rel="stylesheet" href="./assets/styles/style.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+</head>
+<body>
+    <header>
+      <nav class="black">
+        <div class="nav-wrapper container">
+          <a href="index.html" class="brand-logo font-1-xxl">
+            <img src="./assets/img/bikcraft.svg" alt="">
+          </a>
+          <!-- Ícone do menu mobile -->
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+      
+          <!-- Menu desktop -->
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="listar.html">Listagem</a></li>
+          </ul>
+      
+          <!-- Menu mobile -->
+          <ul class="sidenav" id="mobile-demo">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="cadastro.html">Cadastro</a></li>
+            <li><a href="listar.html">Listagem</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+  <div class="container">
+    <h4 class="center-align">Bicicletas Cadastradas</h4>
+    <div class="row" id="listaBikes">
+      <!-- Cards serão inseridos aqui via JS -->
+    </div>
+  </div>
+
+  <!-- Materialize Script -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <script>
+   document.addEventListener('DOMContentLoaded', () => {
+      const lista = document.getElementById('listaBikes');
+      let bikes = JSON.parse(localStorage.getItem('bicicletas')) || [];
+
+      function renderLista() {
+        lista.innerHTML = '';
+
+        if (bikes.length === 0) {
+          lista.innerHTML = '<p class="center-align red-text">Nenhuma bicicleta cadastrada.</p>';
+          return;
+        }
+
+        bikes.forEach((bike, index) => {
+          const card = document.createElement('div');
+          card.className = 'col s12 m6 l4';
+          card.innerHTML = `
+            <div class="card bicicleta-card z-depth-2">
+              <div class="card-image">
+                <img src="${bike.imagem}" alt="${bike.nome}">
+              </div>
+              <div class="card-content">
+                <span class="card-title">${bike.nome}</span>
+                <p><strong>Preço:</strong> R$ ${bike.preco}</p>
+                <p><strong>Categoria:</strong> ${bike.categoria}</p>
+                <p><strong>Tipo:</strong> ${bike.tipo}</p>
+                <p><strong>Cor:</strong> ${bike.cor}</p>
+              </div>
+              <div class="card-action center-align">
+                <button class="btn red" onclick="excluirBicicleta(${index})">Excluir</button>
+              </div>
+            </div>
+          `;
+          lista.appendChild(card);
+        });
+      }
+
+      window.excluirBicicleta = function(index) {
+        if (confirm("Deseja realmente excluir esta bicicleta?")) {
+          bikes.splice(index, 1);
+          localStorage.setItem('bicicletas', JSON.stringify(bikes));
+          renderLista();
+        }
+      }
+
+      renderLista();
+    });
+    
+    //Menu mobile
+    document.addEventListener('DOMContentLoaded', function() {
+        const elems = document.querySelectorAll('.sidenav');
+        M.Sidenav.init(elems);
+      });
+  </script>
+
+</body>
+</html>
