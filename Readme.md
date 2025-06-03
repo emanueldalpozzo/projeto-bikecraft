@@ -12,6 +12,7 @@ O frontend da aplicação foi desenvolvido com HTML, CSS e JavaScript e o backen
       https://www.figma.com/design/OxqgDbiL1gRXjmqZZNndQQ/emanuel.2002-s-team-library?node-id=2332-2&t=t0PkgUNDSmGv5IXY-1
 
 ## Site em Produção - GitHub Pages
+        https://emanueldalpozzo.github.io/projeto-bikecraft/
 
 ## Framework CSS:
       https://materializecss.com/
